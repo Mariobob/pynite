@@ -47,7 +47,7 @@ class Client:
 
     def __init__(self, token, timeout=10, session=None):
         self.token = token
-        self.session = aiohttp.ClientSession() if session is None else session
+        self.session = aiohttp.ClientSession() if session is None else session #freetnt https://github.com/freetnt5852/idioticapi
         self.timeout = timeout
         self.headers = {
             'TRN-Api-key': token
