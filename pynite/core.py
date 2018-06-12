@@ -45,9 +45,9 @@ class Client:
             Get total lifetime statistics for a player.
     '''
 
-    def __init__(self, token, timeout=10):
+    def __init__(self, token, timeout=10, session=None):
         self.token = token
-        self.session = aiohttp.ClientSession()
+        self.session = aiohttp.ClientSession() if session is None else session
         self.timeout = timeout
         self.headers = {
             'TRN-Api-key': token
